@@ -73,6 +73,17 @@ variable "health_check_path" {
   description = "The destination for the health check request"
 }
 
+variable "health_check_protocol" {
+  type        = string
+  default     = "HTTP"
+  description = "The protocol for the health check request"
+}
+variable "health_check_port" {
+  type        = string
+  default     = "80"
+  description = "The port for the health check request"
+}
+
 variable "health_check_timeout" {
   type        = string
   default     = "10"
