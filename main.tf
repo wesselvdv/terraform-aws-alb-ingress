@@ -19,7 +19,7 @@ module "default_label" {
 }
 
 resource "aws_lb_target_group" "default" {
-  count       = local.target_group_enabled == "true" ? 1 : 0
+  count       = var.target_group_arn == "" ? 1 : 0
   name        = module.default_label.id
   port        = var.port
   protocol    = var.protocol
